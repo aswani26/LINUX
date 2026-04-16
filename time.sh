@@ -1,0 +1,19 @@
+if [ $# -ne 0 ]
+then
+echo "syntax is <$0>"
+exit 1
+fi
+t=`date +%H`
+if [ $t -ge 0 -a $t -lt 12 ]
+then
+echo "good morining"
+elif [ $t -ge 12 -a $t -lt 16 ]
+then
+echo "good afternoon"
+elif [ $t -ge 16 -a $t -lt 20 ]
+then
+echo "good evening"
+else
+echo "good night"
+fi
+
